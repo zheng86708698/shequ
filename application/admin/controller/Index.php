@@ -9,4 +9,7 @@ class Index extends Common
         $this->assign('name',$admin->name);
         return $this->fetch();
     }
+    public function welcome(){
+    	return $this->fetch();
+    }
 }
