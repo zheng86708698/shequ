@@ -1,0 +1,69 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="__STATIC__/admin/js/html5.js"></script>
+<script type="text/javascript" src="__STATIC__/admin/js/respond.min.js"></script>
+<script type="text/javascript" src="__STATIC__/admin/js/PIE_IE678.js"></script>
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="__STATIC__/admin/css/H-ui.css"/>
+<link type="text/css" rel="stylesheet" href="__STATIC__/admin/css/H-ui.admin.css"/>
+<link type="text/css" rel="stylesheet" href="font/font-awesome.min.css"/>
+<link rel="stylesheet" href="__STATIC__/layui/css/layui.css">
+<script src="__STATIC__/layui/layui.js"></script>
+<!--[if IE 7]>
+<link href="font/font-awesome-ie7.min.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<title>用户管理</title>
+</head>
+<body>
+<nav class="Hui-breadcrumb"><i class="icon-home"></i> 首页 <span class="c-gray en">&gt;</span> 用户中心 <span class="c-gray en">&gt;</span> 用户管理 <a class="btn btn-success radius r mr-20" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="icon-refresh"></i></a></nav>
+<div class="pd-20">
+  <div class="text-c"> 
+    
+    <input type="text" class="input-text" style="width:250px" placeholder="输入会员名称、电话、邮箱" id="" name=""><button type="submit" class="btn btn-success" id="" name=""><i class="icon-search"></i> 搜用户</button>
+
+  </div>
+  <div class="cl pd-5 bg-1 bk-gray mt-20">
+    <span class="l"><a href="javascript:;" onClick="datadel()" class="btn btn-danger radius"><i class="icon-trash"></i> 批量删除</a>
+    <a href="javascript:;" onClick="user_add('550','','添加用户','user-add.html')" class="btn btn-primary radius"><i class="icon-plus"></i> 添加用户</a></span>
+    <span class="r">共有数据：<strong>88</strong> 条</span>
+  </div>
+  <table class="layui-table" lay-filter="edit-table" lay-data="{method: 'post',loading:'true',
+url:'{:url('Society/list')}', where:{name:'{$data.name}'},page:true, id:'idDemo'}" lay-filter="test">
+  <thead>
+  <tr>
+    <th lay-data="{field:'mid',width:100,}">序号</th>
+    <th lay-data="{field:'member',width:100,}">姓名</th>
+    <th lay-data="{field:'phone',width:160,}">手机号</th>
+    <th lay-data="{toolbar:'#sex',width:100,}">性别</th>
+    <th lay-data="{toolbar:'#address',width:200,}">地址</th>
+    <th lay-data="{field:'creattime',width:100,}">加入时间</th>
+    <th lay-data="{field:'role',width:100,}">代理等级</th>
+    <th lay-data="{field:'seniority',width:200,}">资格剩余</th>
+    <th lay-data="{field:'score',width:200,}">积分</th>
+    <th lay-data="{field:'money',width:200,}">已提现金额</th>
+    <th lay-data="{field:'p_phone',width:200,}">上级代理</th>
+    <th lay-data="{toolbar:'#status',width:100,}">状态</th>
+    <th lay-data="{toolbar:'#action',width:200,}">操作</th>
+  </tr>
+  </thead>
+</table>
+  <div id="pageNav" class="pageNav"></div>
+</div>
+<script type="text/javascript" src="__STATIC__/admin/js/jquery.min.js"></script>
+<script type="text/javascript" src="__STATIC__/admin/layer/layer.min.js"></script>
+<script type="text/javascript" src="__STATIC__/admin/js/pagenav.cn.js"></script>
+<script type="text/javascript" src="__STATIC__/admin/js/H-ui.js"></script>
+<script type="text/javascript" src="__STATIC__/admin/plugin/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="__STATIC__/admin/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="__STATIC__/admin/js/H-ui.admin.js"></script>
+
+
+</body>
+</html>

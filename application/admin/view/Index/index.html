@@ -28,21 +28,19 @@
 <meta name="description" content="H-ui.admin v2.1，是一款由国人开发的轻量级扁平化网站后台模板，完全免费开源的网站后台管理系统模版，适合中小型CMS后台系统。">
 </head>
 <body style="overflow:hidden">
-<header class="Hui-header cl"> <a class="Hui-logo l" title="H-ui.admin v2.1" href="/">H-ui.admin</a> <a class="Hui-logo-m l" href="/" title="H-ui.admin">H-ui</a> <span class="Hui-subtitle l">V2.1</span> <span class="Hui-userbox"><span class="c-white">超级管理员：admin</span> <a class="btn btn-danger radius ml-10" href="#" title="退出"><i class="icon-off"></i> 退出</a></span> <a aria-hidden="false" class="Hui-nav-toggle" id="nav-toggle" href="#"></a> </header>
+<header class="Hui-header cl"> <a class="Hui-logo l" title="H-ui.admin v2.1" href="/">H-ui.admin</a> <a class="Hui-logo-m l" href="/" title="H-ui.admin">H-ui</a> <span class="Hui-subtitle l">V2.1</span> <span class="Hui-userbox"><span class="c-white">{$name}</span> <a class="btn btn-danger radius ml-10" href="#" title="退出"><i class="icon-off"></i> 退出</a></span> <a aria-hidden="false" class="Hui-nav-toggle" id="nav-toggle" href="#"></a> </header>
 <div class="cl Hui-main">
   <aside class="Hui-aside" style="">
     <input runat="server" id="divScrollValue" type="hidden" value="" />
     <div class="menu_dropdown bk_2">
       <dl id="menu-user">
-        <dt><i class="icon-user"></i> 用户中心<b></b></dt>
+        <dt><i class="icon-user"></i> 社区管理<b></b></dt>
         <dd>
           <ul>
-            <li><a _href="user-list.html" href="javascript:;">用户管理</a></li>
-            <li><a _href="user-list-del.html" href="javascript:;">删除的用户</a></li>
-            <li><a _href="user-list-black.html" href="javascript:;">黑名单</a></li>
-            <li><a _href="record-browse.html" href="javascript:void(0)">浏览记录</a></li>
-            <li><a _href="record-download.html" href="javascript:void(0)">下载记录</a></li>
-            <li><a _href="record-share.html" href="javascript:void(0)">分享记录</a></li>
+            
+            <li><a _href="{:url('Society/list')}" href="javascript:;">社区列表</a></li>
+            <li><a _href="user-list-black.html" href="javascript:;">添加社区</a></li>
+            
           </ul>
         </dd>
       </dl>

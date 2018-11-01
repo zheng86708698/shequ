@@ -16,7 +16,7 @@ class Login extends Controller
             }
          	$login =\app\common\service\Admin::login($name,$pwd);
          	if ($login) {
-                Session::set('admin_infoinfo',$login);
+                Session::set('admin_info',$login);
                 Session::set('expire',time()+1200);
                 $arr['adminid'] = $login->id;
                 $arr['ip'] = $this->request->ip();

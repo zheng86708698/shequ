@@ -9,8 +9,16 @@ class Society{
 		$Society ->save();
  		return $Society;
 	}
-	public static function getList($id){
-		return \app\common\model\Society::where("id"=>$id)->select();
+	public static function getList(array $arr){
+		$where = [];
+		if (count($arr)) {
+			if (isset($arr['where'])&&!empty($arr['where'])) {
+				$where['name'] = $arr['name'];
+			}
+			$page = $arr['page'];
+			$limit = $arr['limit'];
+		}
+		return \app\common\model\Society::where($where)->page($page,$limit)->select();
 	}
 	public static function delOne($id){
 	    return \app\common\model\Society::where(['id'=>$id])->delete();

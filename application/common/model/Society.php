@@ -1,6 +1,6 @@
 <?php
 namespace app\common\model;
-class Building extends Base{
+class Society extends Base{
 	public function member(){
 	    return $this->hasMany("Member","societyid");
 	}

@@ -26,4 +26,18 @@ class Common extends Controller
         $id = $this->adminInfo['id'];
         $this->assign('admin', $this->adminInfo);
     }
+    /**
+     * [_table_return layui表单返回]
+     * @param  integer $code  [状态]
+     * @param  string  $msg   [信息]
+     * @param  integer $count [条数]
+     * @param  [type]  $data  [数据]
+     * @return [type]         [json]
+     */
+    public function _table_return($code = 0, $msg = "", $count = 0, $data = [])
+    {
+        // return $this->_return(['code' => $code, 'msg' => $msg, 'count' => $count, 'data' => $data]);
+        $data = ['code' => $code, 'msg' => $msg, 'count' => $count, 'data' => $data];
+        exit($data);
+    }
 }
